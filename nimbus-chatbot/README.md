@@ -1,13 +1,12 @@
 # Nimbus — a simple AI chatbot
 
 A small full-stack chatbot: a plain HTML/CSS/JS frontend, and a tiny Express
-backend that holds your openai API key and forwards chat requests so the key
-is never exposed to the browser.
+backend that generates replies locally without requiring any external API key.
 
-## 1. Get an API key
+## 1. No API key required
 
-Create a key at https://console.anthropic.com (Settings → API Keys). New
-accounts get some free credits, which is enough to test this project.
+Nimbus now runs entirely offline in this demo. You do not need to configure
+any `.env` file or provide an API key.
 
 ## 2. Install Node.js
 
@@ -28,18 +27,9 @@ From inside this project folder, run:
 npm install
 ```
 
-## 4. Add your API key
+## 4. Run it
 
-Copy the example env file and fill in your real key:
-
-```
-cp .env.example .env
-```
-
-Then open `.env` and replace `your_api_key_here` with your actual key.
-`.env` is already in `.gitignore`, so it will never be uploaded to GitHub.
-
-## 5. Run it
+No `.env` configuration is required for the local demo.
 
 ```
 npm start
@@ -76,6 +66,4 @@ folder as a local repository, write a commit message, click "Commit", then
 Running locally is great for development, but a resume project usually
 needs a live link. Since this already has a backend, you can deploy the
 whole folder as-is to a host like Render or Railway (both have free tiers
-for small Node apps): connect your GitHub repo, set the `ANTHROPIC_API_KEY`
-environment variable in their dashboard, and set the start command to
-`npm start`.
+for small Node apps). Set the start command to `npm start`.
